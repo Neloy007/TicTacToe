@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="30dp"
+    android:background="#2196F3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/game"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tic Tac Toe"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: 0                                          O: 0"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gridCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreText">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:padding="4dp"
+                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:id="@+id/gridLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="3"
+                        android:rowCount="3"
+                        android:useDefaultMargins="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/cell0"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/cell_background"
+                            android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell1" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell2" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell3" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell4" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell5" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell6" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell7" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                        <ImageView android:id="@+id/cell8" android:layout_width="100dp" android:layout_height="100dp" android:background="@drawable/cell_background" android:scaleType="centerInside" />
+                    </GridLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/btnChooseX"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/cross"
+        android:contentDescription="Choose X"
+        app:layout_constraintTop_toBottomOf="@+id/gridCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="15dp" />
+
+    <ImageView
+        android:id="@+id/btnChooseO"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/zero"
+        android:contentDescription="Choose O"
+        app:layout_constraintTop_toBottomOf="@+id/gridCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        android:layout_marginStart="16dp" />
+                <Button
+                    android:id="@+id/btnRestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restart"
+                    android:backgroundTint="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
